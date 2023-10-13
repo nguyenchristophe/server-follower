@@ -12,11 +12,11 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 const jwt = require("jsonwebtoken");
-
 mongoose
-  .connect("", {
+  .connect("mongodb+srv://christophe:Ovhcpp0503_&@cluster0.mw9gbe4.mongodb.net/db_applizen?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    dbName: "db_poeme"
   })
   .then(() => {
     console.log("Connected to MongoDB");
